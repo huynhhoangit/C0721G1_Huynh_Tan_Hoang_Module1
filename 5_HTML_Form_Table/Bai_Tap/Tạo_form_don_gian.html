@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Form Đơn Giản Bài 5</title>
+
+</head>
+<body>
+<div style="border-style: solid;border-radius: 10px; border-width: 10px ;border-color: #05e798; width: 500px ; height: 250px; margin-right: auto;margin-left: auto">
+    <form action="server.php" method="post">
+        <h1 style="color: white ;border-radius: 20px; text-align:center ;background-color: red">Sở Thích Của Bạn</h1>
+        <table style="border-radius: 1px ; solid-color: blueviolet">
+            <tr style="color: blue">
+                <td style="width: 150px; text-align: right"><label for="fullname">Họ Và Tên:</label></td>
+                <td style="width: 350px"><input type="text" id="fullname" name="fullname"></td>
+            </tr>
+            <tr style="color: blue">
+                <td style="width: 150px; text-align: right"><label for="email">Email:</label></td>
+                <td style="width: 250px"><input type="text" id="email" name="email"></td>
+            </tr>
+            <tr style="color: blue">
+                <td style="width: 150px; text-align: right "><label for="email">Sở Thích:</label></td>
+                <td style="width: 350px; color: orangered">
+                    <input type="checkbox" id="tt" name="hobby">Thể Thao
+                    <input type="checkbox" id="an" name="hobby">Âm Nhạc
+                    <input type="checkbox" id="dc" name="hobby">Đọc Sách
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 150px; color: orangered">
+                <td style="width: 350px; color: orangered">
+
+                    <input type="checkbox" id="lw" name="hobby">Lướt Web
+                    <input type="checkbox" id="CG" name="hobby">Chơi Game
+                    <input type="checkbox" id="ĐA" name="hobby">Điện Ảnh
+
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 150px; color: orangered">
+                <td style="width: 350px; color: orangered">
+
+                    <input type="checkbox" id="DL" name="hobby">Du Lịch
+
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width: 150px"></td>
+                <td style="width: 350px"><input type="submit" value="Giử Thông Tin">
+                    <input type="reset" value="Nhập Lại">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+</body>
+</html>
