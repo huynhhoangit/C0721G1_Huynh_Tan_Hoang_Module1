@@ -2,9 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title> form đăng ký học viên </title>
 </head>
 <body>
-$END$
+<form action="registration.php" method="post">
+    <div style=" border-style: groove ;width: 600px;height: 430px; background-color: khaki">
+        <h2 style="color: blue; margin: 5px 5px 5px 5px; background-color: skyblue">ĐĂNG KÝ HỌC VIÊN</h2>
+        <table style="border-spacing: 15px">
+            <tr>
+                <td style="width: 100px; text-align: left;color: blue"><label for="fullname">Họ Và Tên</label></td>
+                <td style="width: 350px"><input style="height: 18px ;width: 230px;" type="text" id="fullname"
+                                                name="fullname"></td>
+
+            </tr>
+
+            <tr>
+                <td style="width: 100px; text-align: left;color: blue"><label for="Dateofbirth">Ngày Sinh</label></td>
+                <td style="width: 350px"><input style="width: 110px ;height: 18px " type="text" id="Dateofbirth"
+                                                name="Dateofbirth"></td>
+
+            </tr>
+            <tr>
+                <td style="width: 100px; text-align: left;color: blue"><label for="sex">Giới Tính</label></td>
+
+                <td><input type="radio" id="sex" name="sex" value="man">Nam
+                    <input type="radio" id="sex" name="sex" value="women">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100px; text-align: inherit;color: blue; "><label for="add">Địa Chỉ</label></td>
+                <td rowspan="4" style="width: 350px;"><textarea style="width: 210px;"  type="text" id="add" name="add"
+                                                               rows="4"></textarea></td>
+
+            </tr>
+            <tr>
+                <td style="width: 100px; "></td>
+            </tr>
+            <tr>
+                <td style="width: 100px; "></td>
+            </tr>
+            <tr>
+                <td style="width: 100px; "></td>
+            </tr>
+            <tr>
+                <td style="width: 100px; text-align: left;color: blue"><label for="class">Lớp</label></td>
+                <td style="width: 350px;"><select style="height: 18px ;width: 100px ;"  type="class" id="class"
+                                                 name="class">
+                    <option value="0">--Chọn Lớp--</option>
+                    <option value="1">Lớp 1</option>
+                    <option value="2">Lớp 2</option>
+                    <option value="3">Lớp 3</option>
+                </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td style="width: 100px; text-align: left;color: blue"><label for="Email">Email</label></td>
+                <td style="width: 350px"><input style="width: 190px ;height: 18px "  type="text" id="Email"
+                                                name="Email"></td>
+
+            </tr>
+            <tr>
+                <td style="width: 100px; text-align: left;color: blue"><label for="phone">Điện Thoại</label></td>
+                <td style="width: 350px"><input style="width: 190px ;height: 18px "  type="text" id="phone"
+                                                name="phone"></td>
+
+            </tr>
+            <tr>
+                <td style="width: 100px;"></td>
+                <td style="width: 350px"><input type="submit" id="submit"
+                                                name="submit" value="Đăng Ký">
+
+                    <input type="reset" id="reset"
+                           name="reset" value="Nhập Lại">
+
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+</form>
+
 </body>
 </html>
