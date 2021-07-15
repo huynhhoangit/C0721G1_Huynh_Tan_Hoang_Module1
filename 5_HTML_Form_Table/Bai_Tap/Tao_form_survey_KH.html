@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Tạo form lấy survey khách hàng</title>
+</head>
+<body>
+<form action="/link-server"method="post">
+    <h2>Market Research Survey</h2>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <ul>
+        <li>
+            <p>What is your age range?</p>
+            <select name="old" id="old">
+                <option value="tre">
+                    <span class="abc">18-24</span>
+                </option>
+                <option value="truongthanh">
+                    <span class="abc">25-34</span>
+                </option>
+                <option value="trungnien">
+                    <span class="abc">35-50</span>
+                </option>
+                <option value="gia">
+                    <span class="abc">50+</span>
+                </option>
+            </select>
+        </li>
+        <li>
+            <P>What is your yearly income range?</p>
+            <select name="Luong" id="Luong">
+                <option value="thap">
+                    <span class="abc">$0 - $25,000</span>
+                </option>
+                <option value="tb">
+                    <span class="abc">$25,001 - $50,0000</span>
+                </option>
+                <option value="cao">
+                    <span class="abc">$50,001 - $100,0000</span>
+                </option>
+                <option value="sieucao">
+                    <span class="abc">$100,0000+</span>
+                </option>
+            </select>
+        </li>
+        <li>
+            <P>Gender Identity</p>
+            <input type="radio" value="Male" name="gt"> Male <br>
+            <input type="radio" value="Female" name="gt"> Female <br>
+            <input type="radio" value="Nonbinary" name="gt"> Nonbinary <br>
+            <input type="radio" value="Other" name="gt">Other<br>
+            <input type="text" value="texl" name="gt">
+
+        </li>
+        <li>
+            <P>Which of the following products have your purchased in the last 2 months. Please check all that apply.</p>
+            <input type="checkbox" value="a">Product 1 <br>
+            <input type="checkbox" value="a">Product 2 <br>
+            <input type="checkbox" value="a">Product 3<br>
+        </li>
+        <li>
+            <P>How often would you use our new product?</p>
+            <input type="radio" value="Daily" name="date"> Daily <br>
+            <input type="radio" value="Weekly" name="date"> Weekly <br>
+            <input type="radio" value="Monthly" name="date"> Monthly <br>
+        </li>
+        <li>
+            <P>What features would you like to see in the new product.</p>
+            <textarea type="text" name="noidung"></textarea>
+        </li>
+    </ul>
+
+</form>
+</body>
+</html>
