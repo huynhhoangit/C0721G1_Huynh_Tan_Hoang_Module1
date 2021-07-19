@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Biến, kiểu dữ liệu và toán tử - điểm trung bình</title>
+</head>
+<body>
+
+<p>Bài 1: Viết chương trình nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học. Sau đó hiển thị điểm trung bình và tổng của những điểm này.</p>
+      <p id="kq"></p>
+
+</body>
+
+<script>
+     inputtoan = prompt("nhập vào điểm Toán Của Bạn ");
+     inputly = prompt("nhập vào điểm Lý Của Bạn ");
+     inputhoa = prompt("nhập vào điểm Hóa Của Bạn ");
+
+     let toan = parseInt(inputtoan);
+     let ly = parseInt(inputly);
+     let hoa = parseInt(inputhoa);
+
+     let dtb = toan + ly + hoa  ;
+
+     document.getElementById("kq").innerText= "Điểm Trung Bình" + dtb/3 ;
+
+
+</script>
+</html>
