@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table style="background-color: #05e798">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><label><input type="number" id="money"></label></td>
+        <td><label><select id="From">
+            <option value="VND"> Việt Nam</option>
+            <option value="USD"> USD</option>
+
+        </select>
+            </label>
+        </td>
+        <td><label>
+            <select id="To">
+            <option value="USD"> USD</option>
+            <option value="VND"> Việt Nam</option>
+
+
+        </select>
+        </label>
+        </td>
+        <td><input type="button" value="Convert" onclick="doitien();"></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="color: #0733b8 ; text-align: center" id="kq"></td>
+    </tr>
+
+
+</table>
+
+</body>
+
+<script>
+    function doitien(){
+        let Amount = parseInt(document.getElementById("money").value);
+
+        let From = document.getElementById("From").value;
+        console.log(From);
+        let To = document.getElementById("To").value;
+        console.log(To);
+
+        if( From === "VND" && To === "USD"){
+
+            document.getElementById("kq").innerHTML = "Result :  " + Amount / 24000 + " $";
+        } else if(From === "USD" && To === "VND") {
+            document.getElementById("kq").innerHTML = "Result :  " + Amount * 24000 + " VNĐ";
+        } else {
+            document.getElementById("kq").innerHTML = "Result :  " + Amount ;
+        }
+
+    }
+
+
+
+
+
+</script>
+</html>
