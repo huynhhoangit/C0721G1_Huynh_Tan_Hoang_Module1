@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Sự kiện chuột</title>
+</head>
+<body>
+<form>
+  <img id="myImage" src="https://cf.shopee.vn/file/47a655207aa398d9781695a5d1e8a651" />
+  <p>Click button below to move the image to right</p>
+  <input type="button" value="Click Me" onclick="moveRight()"  />
+</form>
+</body>
+
+<script>
+  let imgObj = null;
+  imgObj = document.getElementById("myImage");
+
+  function init() {
+    imgObj = document.getElementById('myImage');
+    imgObj.style.position = 'relative';
+    imgObj.style.left = '0px';
+  }
+  function moveRight() {
+    imgObj.style.left = parseInt(imgObj.style.left) + 20 + 'px';
+  }
+     window.onload = init
+</script>
+</html>

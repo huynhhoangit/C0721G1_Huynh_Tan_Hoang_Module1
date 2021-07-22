@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Câu lệnh switch-case</title>
+</head>
+<body>
+
+<h1>Tính Số ngày Trong tháng</h1>
+
+<table>
+    <tr>
+        <td><label> <input type="number" id="day"></label></td>
+        <td><label> <input type="button" value="Tính Số Ngày" onclick="tinhngay()"></label></td>
+    </tr>
+    <tr>
+        <td colspan="2"><label style="background-color: khaki; color: #0733b8" id="kq"></label></td>
+    </tr>
+
+</table>
+
+</body>
+<script>
+    function tinhngay() {
+        let date = parseInt(document.getElementById("day").value);
+        let thang;
+        switch (date) {
+            case 1:
+                thang = "Tháng 1 Có 31 Ngày !";
+                break;
+            case 2:
+                thang = "Tháng 2 Có 28 hoặc 29 Ngày !";
+                break;
+            case 3:
+                thang = "Tháng 3 Có 31 Ngày !";
+                break;
+            case 4:
+                thang = "Tháng 4 Có 30 Ngày !";
+                break;
+            case 5:
+                thang = "Tháng 5 Có 31 !";
+                break;
+            case 6:
+                thang = "Tháng 6 Có 30 Ngày !";
+                break;
+            case 7:
+                thang = "Tháng 3 Có 31 Ngày !";
+                break;
+            case 8:
+                thang = "Tháng 8 Có 31 Ngày !";
+                break;
+            case 9:
+                thang = "Tháng 9 Có 30 Ngày !";
+                break;
+            case 10:
+                thang = "Tháng 10 Có 31 Ngày !";
+                break;
+            case 11:
+                thang = "Tháng 11 Có 30 Ngày !";
+                break;
+            case 12:
+                thang = "Tháng 12 Có 31 Ngày !";
+                break;
+            default :
+                thang = "Bạn Đã Nhập Sai Số Tháng Trong năm Rùi xin mời nhập lại !" ;
+
+        }
+        document.getElementById("kq").innerText = thang ;
+    }
+
+</script>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Game puzzle</title>
+
+    <style>
+
+        div{
+            height: 700px;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<div>
+
+<img src="Images/hinh1a.jpg" id="khoi1" onclick="doihinh(1)"  alt="chan">
+<img src="Images/hinh2b.jpg" id="khoi2" onclick="doihinh(2)" alt="chan">
+<img src="Images/hinh3c.jpg" id="khoi3" onclick="doihinh(3)" alt="chan">
+<img src="Images/hinh1d.jpg" id="khoi4" onclick="doihinh(4)" alt="chan">
+<img src="Images/hinh1e.jpg" id="khoi5" onclick="doihinh(5)" alt="chan">
+</div>
+
+</body>
+<script>
+    let A = document.getElementById('khoi1');
+    let B = document.getElementById('khoi2');
+    let C = document.getElementById('khoi3');
+    let D = document.getElementById('khoi4');
+    let E = document.getElementById('khoi5');
+
+    function doihinh(check){
+        switch (check){
+            case 1: {
+                if (A.getAttribute("src") === "Images/hinh1a.jpg") {
+                    A.src = "Images/hinh2a.jpg";
+                } else if (A.getAttribute("src") === "Images/hinh2a.jpg") {
+                    A.src = "Images/hinh3a.jpg";
+                } else if (A.getAttribute("src") === "Images/hinh3a.jpg") {
+                    A.src = "Images/hinh1a.jpg";
+                }
+                checkImage();
+                break;
+            }case 2: {
+                if (B.getAttribute("src") === "Images/hinh1b.jpg") {
+                    B.src = "Images/hinh2b.jpg";
+                } else if (B.getAttribute("src") === "Images/hinh2b.jpg") {
+                    B.src = "Images/hinh3b.jpg";
+                } else if (B.getAttribute("src") === "Images/hinh3b.jpg") {
+                    B.src = "Images/hinh1b.jpg";
+                }
+                checkImage();
+                break;
+            }case 3: {
+                if (C.getAttribute("src") === "Images/hinh1c.jpg") {
+                    C.src = "Images/hinh2c.jpg";
+                } else if (C.getAttribute("src") === "Images/hinh2c.jpg") {
+                    C.src = "Images/hinh3c.jpg";
+                } else if (C.getAttribute("src") === "Images/hinh3c.jpg") {
+                    C.src = "Images/hinh1c.jpg";
+                }
+                checkImage();
+                break;
+            }case 4: {
+                if (D.getAttribute("src") === "Images/hinh1d.jpg") {
+                    D.src = "Images/hinh2d.jpg";
+                } else if (D.getAttribute("src") === "Images/hinh2d.jpg") {
+                    D.src = "Images/hinh3d.jpg";
+                } else if (D.getAttribute("src") === "Images/hinh3d.jpg") {
+                    D.src = "Images/hinh1d.jpg";
+                }
+                checkImage();
+                break;
+            }case 5: {
+                if (E.getAttribute("src") === "Images/hinh1e.jpg") {
+                    E.src = "Images/hinh2e.jpg";
+                } else if (E.getAttribute("src") === "Images/hinh2e.jpg") {
+                    E.src = "Images/hinh3e.jpg";
+                } else if (E.getAttribute("src") === "Images/hinh3e.jpg") {
+                    E.src = "Images/hinh1e.jpg";
+                }
+                checkImage();
+                break;
+            }
+        }
+
+
+
+    }
+
+    function checkImage(){
+        if (A.getAttribute("src") === "Images/hinh1a.jpg" &&
+            B.getAttribute("src") === "Images/hinh1b.jpg" &&
+            C.getAttribute("src") === "Images/hinh1c.jpg" &&
+            D.getAttribute("src") === "Images/hinh1d.jpg" &&
+            E.getAttribute("src") === "Images/hinh1e.jpg"
+        )
+        {
+             alert("bạn đã chọn đúng hình A")
+        }   else if (A.getAttribute("src") === "Images/hinh2a.jpg" &&
+            B.getAttribute("src") === "Images/hinh2b.jpg" &&
+            C.getAttribute("src") === "Images/hinh2c.jpg" &&
+            D.getAttribute("src") === "Images/hinh2d.jpg" &&
+            E.getAttribute("src") === "Images/hinh2e.jpg"
+        )
+        {
+             alert("bạn đã chọn đúng hình B")
+        } else if (A.getAttribute("src") === "Images/hinh3a.jpg" &&
+            B.getAttribute("src") === "Images/hinh3b.jpg" &&
+            C.getAttribute("src") === "Images/hinh3c.jpg" &&
+            D.getAttribute("src") === "Images/hinh3d.jpg" &&
+            E.getAttribute("src") === "Images/hinh3e.jpg"
+        )
+        {
+             alert("bạn đã chọn đúng hình C")
+        }
+
+
+    }
+
+
+</script>
+</html>

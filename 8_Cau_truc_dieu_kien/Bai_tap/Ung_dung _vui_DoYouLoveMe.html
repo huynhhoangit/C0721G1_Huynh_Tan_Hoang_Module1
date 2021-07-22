@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui DoYouLoveMe</title>
+</head>
+<body>
+
+<h1 style="position:absolute; left:220px; top:175px;">Do you love me?</h1>
+<input type="button" value=" YES " onclick="yesClick()" style="position:absolute; left:285px; top:235px;"/>
+<input type="button" id="btnNo" value="  NO  " onmouseover="noHover()" style="position:absolute; left:360px; top:235px;"/>
+
+</body>
+
+<script>
+  function yesClick(){
+    alert("ok anh cung iu baby !")
+  }
+
+  function noHover(){
+    let cao = window.innerHeight ; /// window.innerHeight lấy full giá trị màng hình
+    let rong = window.innerWidth ; /// window.innerWidth lấy full giá trị màng hình
+
+    document.getElementById("btnNo").style.position = "absolute" ;
+    document.getElementById("btnNo").style.left = Math.random() * cao + "px" ;
+    document.getElementById("btnNo").style.top = Math.random() * rong + "px" ;
+
+    console.log(document.getElementById("btnNo").style.top = Math.random() * rong + "px")
+  }
+
+
+</script>
+</html>

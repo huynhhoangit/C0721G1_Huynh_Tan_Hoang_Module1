@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Máy tính bỏ đơn giản</title>
+  <style>
+    td{
+      text-align: center;
+
+      width: 70px;
+
+      height: 70px;
+    }
+    input{
+      margin-left: 20px;
+      width: 70px;
+      height: 50px;
+      color: #0733b8;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    p{
+
+      margin-left: 15px;
+      min-height: 80px ;
+      min-width: 430px ;
+      font-size: 45px;
+      color: #0733b8;
+      background-color: lightblue;
+      text-align: right;
+
+
+    }
+
+    table {
+      background-color: #fbfcfc;
+      padding: 10px 10px 10px 10px;
+      margin: 10px 15px 15px 10px;
+      border: solid;
+      width: 600px;
+    }
+    .hienthi{
+      width: 450px;
+      
+    }
+
+    div{
+
+
+    }
+  </style>
+</head>
+<body>
+<div>
+    <table>
+
+      <tr>
+        <td class="hienthi" colspan="4"><p id="kq">0</p></td>
+      </tr>
+      <tr>
+        <td><label><input type="button" value="1" onclick="maytinh('1')"></label></td>
+        <td><label><input type="button" value="2" onclick="maytinh('2')"></label></td>
+        <td><label><input type="button" value="3" onclick="maytinh('3')"></label></td>
+        <td><label><input type="button" value="+" onclick="maytinh('+')"></label></td>
+      </tr>
+      <tr>
+        <td><label><input type="button" value="4" onclick="maytinh('4')"></label></td>
+        <td><label><input type="button" value="5" onclick="maytinh('5')"></label></td>
+        <td><label><input type="button" value="6" onclick="maytinh('6')"></label></td>
+        <td><label><input type="button" value="-" onclick="maytinh('-')"></label></td>
+      </tr>
+      <tr>
+        <td><label><input type="button" value="7" onclick="maytinh('7')"></label></td>
+        <td><label><input type="button" value="8" onclick="maytinh('8')"></label></td>
+        <td><label><input type="button" value="9" onclick="maytinh('9')"></label></td>
+        <td><label><input type="button" value="X" onclick="maytinh('*')"></label></td>
+      </tr>
+      <tr>
+        <td><label><input type="button" value="C" onclick="xoa()"></label></td>
+        <td><label><input type="button" value="0" onclick="maytinh('0')"></label></td>
+        <td><label><input type="button" value="=" onclick="ketqua()"></label></td>
+        <td><label><input type="button" value="/" onclick="maytinh('/')"></label></td>
+      </tr>
+
+
+    </table>
+
+
+</div>
+
+</body>
+
+<script>
+
+
+  let x = "";
+
+  function maytinh(value) {
+    x +=value ;
+
+    document.getElementById("kq").innerText = x ;
+    document.getElementById("kq").value = x ;
+
+
+  }
+
+     function xoa() {
+
+       x = "";
+       document.getElementById("kq").innerText = x ;
+     }
+     function ketqua() {
+       x = eval(document.getElementById("kq").value);
+
+       document.getElementById("kq").innerText = x ;
+
+       x= "" ;
+
+     }
+
+
+
+
+
+
+</script>
+</html>
