@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</title>
+</head>
+<body>
+
+</body>
+<script>
+    let a = 1, b = 0, f;
+    let t = 0;
+
+
+    for (let i = 0; i < 20; i++) {
+        f = a;
+        a = a + b;
+        b = f;
+        console.log(f + "<br>")
+        if (f % 5 === 0) {
+            document.write("Số Đầu Tiên Chia Hết Cho 5 Là :" + f + "<br>");
+            t++
+        }
+        if (t === 1) {
+            break;
+        }
+
+    }
+
+
+</script>
+</html>

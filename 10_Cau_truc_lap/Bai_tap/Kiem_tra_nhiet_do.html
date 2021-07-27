@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra nhiệt độ</title>
+</head>
+<body>
+
+</body>
+ <script>
+
+     let K = parseInt(prompt("Nhạp vào nhiệt độ phòng: "));
+
+          while (K <= 20 ||K >= 100){
+
+               if (K<=20){
+
+                   alert(" bạn Cần Tăng Nhiệt Độ :") ;
+                   K = parseInt(prompt("Nhạp vào nhiệt độ phòng: "));
+
+               }else if(K>=100){
+                   alert(" bạn Cần Giảm Nhiệt Độ :") ;
+                   K = parseInt(prompt("Nhạp vào nhiệt độ phòng: "));
+               }
+
+
+          }
+     alert("nhiệt độ trong phòng bạn tốt !")
+
+
+
+
+
+ </script>
+</html>

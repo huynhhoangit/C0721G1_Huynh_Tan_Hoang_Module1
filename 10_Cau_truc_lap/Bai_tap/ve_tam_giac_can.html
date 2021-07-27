@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // let height = 12;
+  //
+  // function printUpHeart() {
+  //   for (let i = 0; i < height; i++) {
+  //     for (let j = height - i; j > 0; j--) {
+  //       document.write("&nbsp&nbsp")
+  //     }
+  //     for (let m = 1; m <= i * 2 + 1; m++) {
+  //       document.write("&nbsp&nbsp");
+  //     }
+  //     for (let n = height - i; n > 0; n--) {
+  //       document.write("**")
+  //     }
+  //     for (let k = 1; k <= i * 2 + 1; k++) {
+  //       document.write("&nbsp&nbsp");
+  //     }
+  //     document.write("<br>")
+  //   }
+  // }
+  //
+  // printUpHeart();
+  let h = 10;
+  for (i = 10; i >= 1; i--) {        //in hàng dọc vị trí ngang
+    for (j = 19; j > 0; j--) {     //in hàng ngang vị trí dọc
+      if (Math.abs((h - j)) == (i - 1) || i == 10) {
+        document.write(" *");
+      } else {
+        document.write(' o');
+      }
+    }
+    document.write("<br>");
+  }
+</script>
+</body>
+</html>
