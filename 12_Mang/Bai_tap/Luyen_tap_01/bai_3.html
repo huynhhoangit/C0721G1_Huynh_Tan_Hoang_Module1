@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Bài 3- Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+
+    let n = parseInt(prompt("nhập vào số giá trị của mảng"));
+    let arr = [];
+    let max = 0;
+    let sum = 0;
+    let tb;
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Nhập Giá Trị Của Phần Tử :" + i));
+
+
+    }
+    //tim giá trị lơn nhất của mảng ;
+    for (let i = 0; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    document.write("Giá Trị Lơn Nhất :" + max + "<br>")
+   // tính giá trinh trung bình của mảng
+    for (let k = 0; k < arr.length; k++) {
+        sum = sum + arr[k];
+
+    }
+    tb = sum / n;
+    document.write("giá trị trung binh của mảng : " + tb);
+
+
+</script>
+</html>
