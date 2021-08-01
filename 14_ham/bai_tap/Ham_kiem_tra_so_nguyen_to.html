@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    let nhap = parseInt(prompt("nhap vao so lương snt cần in ra:")) ;
+
+
+    function check_prime (number) {
+        let check = true;
+        let i;
+        for (i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0 && number > 2) {
+                check = false;
+
+            }
+        }
+              return check ;
+    }
+
+    for (let x =0 ; x < nhap ; x ++) {
+
+         if (check_prime (x)) {
+           document.write("đây là số nguyên tố :" + x + "<br>") ;
+
+         }
+
+    }
+
+
+
+</script>
+</html>

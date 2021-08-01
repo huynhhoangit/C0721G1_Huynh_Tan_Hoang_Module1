@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    function timsao() {
+        let arr1 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let arr2 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+
+        let temp = prompt("nhập chòm sao muốn tìm :");
+        let check = true;
+        while (check) {
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] === temp) {
+                    check = false;
+
+                    alert("ngôi sao bạn cần tìm : " + arr2[i]);
+                    break;
+                }
+            }
+                if (check) {
+
+                    alert("Không Có Dữ Liệu ")
+                    temp = prompt("nhập chòm sao muốn tìm:");
+                }
+
+
+            }
+
+    }
+
+
+    }
+        timsao(5);
+
+
+
+</script>
+</html>

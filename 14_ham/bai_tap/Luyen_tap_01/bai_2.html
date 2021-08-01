@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input"><input type="text" id="input" placeholder="nhập số vào"></label> <br>
+<label for="input"><input type="button"  value="tăng"  onclick="a()"> </label> <br>
+<label for="kq"><p id="kq"></p></label><br>
+
+</body>
+<script>
+    function a(){
+        let so  = parseInt(document.getElementById("input").value);
+          so++ ;
+        document.getElementById("kq").innerText = so ;
+    }
+
+
+</script>
+</html>

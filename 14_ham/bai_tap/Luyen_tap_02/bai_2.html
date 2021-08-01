@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết hàm tinh chu vi và diện tích hình chữ nhật</title>
+</head>
+<body>
+<label for="d"></label><input type="number" placeholder="Nhập Chiều Dài" id="d"><label for="r"></label><input type="number" placeholder="Nhập Chiều Dài" id="r"> <br>
+<input type="button" value="tính chu vi" onclick="chuvi()">
+<input type="button" value="tính S" onclick="dientich()">
+
+<p id="kq"></p>
+
+
+
+</body>
+<script>
+     let  dai ;
+     let  rong ;
+
+    function chuvi(){
+
+         dai = parseInt(document.getElementById("d").value);
+
+        rong = parseInt(document.getElementById("r").value);
+        document.getElementById("kq").innerText = "Chu VI Hình Chữ Nhật là :" + (dai + rong) / 2 ;
+    }
+    function dientich(){
+        dai = parseInt(document.getElementById("d").value);
+
+        rong = parseInt(document.getElementById("r").value);
+
+        document.getElementById("kq").innerText = "Diện tích Hình Chữ Nhật là :" + (dai * rong) ;
+    }
+
+
+
+
+
+</script>
+
+</html>

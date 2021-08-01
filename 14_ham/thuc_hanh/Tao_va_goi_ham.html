@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Tạo và gọi hàm</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+//  function processConfirm(answer) {
+//    let result;
+//    if (answer) {
+//      result = "Excellent. We'll play a nice game of chess.";
+//    } else {
+//      result = "Maybe later then.";
+//    }
+//    return result;
+//  }
+//  let confirmAnswer = confirm("Shall we play a game?");
+//  let theAnswer = processConfirm(confirmAnswer);
+//  alert(theAnswer);
+// function add(a, b) {
+//     return a + b;
+// }
+//
+// var sum = add("4", "3");
+//  document.write(add("4", "3"));
+function Person (name) {
+    this.name = name;
+
+    this.say = function () {
+        alert("Xin chào, tên tôi là : " + this.name);
+    }
+}
+var peter = prompt("Xìn Vui lòng Nhập Name :") ;
+
+peters = new Person(peter);
+peters.say();
+
+</script>
+</html>

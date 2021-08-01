@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+
+<table>
+
+    <tr>
+        <td><label for="so"><input id="so" placeholder="xin mời nhập vào" type="text"></label></td>
+        <td><label for="From"></label><select id="From">
+            <option value="foot">foot</option>
+            <option value="meter">meter</option>
+
+
+        </select>
+        </td>
+        <td><label for="To"></label><select id="To">foot
+            ">
+            <option value="meter">meter</option>
+            <option value="foot">foot</option>
+
+
+        </select>
+        </td>
+        <td><label><input type="button" value="Convert" onclick="check()"></label></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="color: #0733b8 ; text-align: center" id="kq"></td>
+    </tr>
+</table>
+
+</body>
+<script>
+
+
+    let foot = 0;
+    let meter = 0;
+
+
+    function footToMeter(meter) {
+
+        foot = 3.279 * meter;
+        return foot ;
+    }
+
+    function meterToFoot(foot) {
+
+        meter = 0.305 * foot;
+        return  meter ;
+    }
+
+    function check() {
+        let a = parseInt(document.getElementById("so").value);
+        let From = document.getElementById("From").value;
+        console.log(From);
+        let To = document.getElementById("To").value;
+        console.log(To);
+     ///// đoạn code 56 - 60 khai báo trong ham check khai báo ngoài hàm không được
+        //** trường hợp so sánh 2 điều kiện khác nhau phải dùng if else if , còn so sánh 1 giá trị dung switch case
+        if (From === "meter" && To === "foot" ){
+
+                document.getElementById("kq").innerHTML = "Result :  " + meterToFoot(a) + " foot";
+        }else if(From === "foot" && To === "meter"){
+
+                document.getElementById("kq").innerHTML = "Result :  " + footToMeter(a) + " meter";
+
+        }else {
+            document.getElementById("kq").innerHTML = "Result :  " + a + "  ok ";
+
+        }
+
+    }
+
+</script>
+</html>

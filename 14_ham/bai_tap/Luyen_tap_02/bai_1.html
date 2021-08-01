@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</title>
+</head>
+<body>
+<label for="num"></label><input type="number" id="num"> : <input type="button" value="tính" onclick="bp()"> <p id="kq"></p>
+
+
+</body>
+<script>
+    function bp(){
+      let a = parseInt(document.getElementById("num").value);
+       b= a*a ;
+       document.getElementById("kq").innerText = b ;
+    }
+
+</script>
+</html>
+
