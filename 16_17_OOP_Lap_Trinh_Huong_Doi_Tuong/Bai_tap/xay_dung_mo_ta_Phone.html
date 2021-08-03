@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xây dựng lớp mô tả điện thoại</title>
+</head>
+<body>
+<script>
+  class Mobile {
+    constructor(name, battery, memory_message_writing, memory_message_inbox, memory_message_outbox) {
+      this.name = name;
+      this.battery = battery;
+      this.message = "";
+      this.memory_message_writing = memory_message_writing;
+      this.memory_message_inbox = memory_message_inbox;
+      this.memory_message_outbox = memory_message_outbox;
+      this.outbox_message = [];
+      this.inbox_message = [];
+    }
+    checkStatusOnOff () {
+      if (this.battery > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    turnOn () {
+      alert("Điện thoại đang bật");
+    }
+    turnOff () {
+      alert("Điện thoại đang tắt");
+    }
+    charge () {
+      alert("Điện thoại đang xạc " + this.battery++);
+    }
+    setMessage (message) {
+      this.message = message;
+    }
+    getMessage () {
+      return this.message;
+    }
+
+    receiveMessage (message, mobile) {
+      alert("Đã nhận 1 tin nhắn");
+      this.message = message;
+      mobile.getMessage();
+      this.memory_message_inbox--;
+      this.inbox_message.push(message);
+    }
+    sentMessage (message, mobile) {
+      alert("Đã gửi 1 tin nhắn đến " + mobile.name);
+      this.message = message;
+      this.memory_message_outbox--;
+      mobile.setMessage(message);
+      mobile.receiveMessage(message, mobile);
+      this.outbox_message.push(message);
+    }
+    viewMessageInbox () {
+      return this.inbox_message;
+    }
+    viewMessageOutbox () {
+      return this.outbox_message;
+    }
+    afterUse () {
+      this.battery--;
+    }
+    mobileOff () {
+      return this.turnOff();
+    }
+  }
+
+  let nokia = new Mobile("Nokia", 90, 100, 100, 100);
+  let iphone = new Mobile ("Iphone", 100, 100, 100, 100);
+  iphone.sentMessage("send tn iphone - nokia", nokia);
+  document.write("tin nhắn từ iphone - nokia " + nokia.viewMessageInbox());
+  console.log(iphone.viewMessageOutbox())
+</script>
+</body>
+</html>

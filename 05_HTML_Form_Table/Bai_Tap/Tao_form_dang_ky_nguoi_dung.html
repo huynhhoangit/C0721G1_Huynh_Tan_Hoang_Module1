@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Tạo giao diện form đăng ký người dùng</title>
+    <style>
+       div {
+           font-family: Arial;
+           font-weight: 550;
+           margin: 50px 50px 50px 50px;
+        }
+        table{
+
+            padding: 50px 50px 50px 50px;
+        }
+    </style>
+</head>
+<body>
+<div style="width:500px; height: 500px ; border-radius: 1px ; background-color: khaki ; margin-left: auto ; margin-right: auto">
+    <form action="/registration_form/register.php" method="post">
+        <label for="fullname">Họ Và Tên:</label> <br>
+        <input type="text" name="fullname" id="fullname"> <br> <br>
+        <label for="email">Email:</label> <br>
+        <input type="text" name="email" id="email"><br> <br>
+        <label for="Phone">Phone:</label> <br>
+        <input type="text" name="Phone" id="Phone"><br> <br>
+        <label>Giới Tính:</label> <br>
+        <input type="radio" name="gender"  value="man">Nam
+        <input type="radio" name="gender"  value="woman">Nữ
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Đăng Ký">
+
+
+        <br>
+
+
+    </form>
+
+
+</div>
+
+
+</body>
+</html>

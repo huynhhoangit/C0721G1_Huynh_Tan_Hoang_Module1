@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<input type="number" onmouseleave="secondmain()" id="input">
+<button type="button" onclick="beta()" >Dãy số nguyên tố <1000</button></body>
+<script>
+ 1,2,3,5,7,9,11,13,17,19
+
+
+     let numbers = parseInt(prompt("Bạn muốn hiển thị bao nhiêu số nguyên tố đầu tiên:"));
+     function check_prime (number) {
+     let check = true;
+     let i;
+     for (i = 2; i <= Math.sqrt(number); i++){
+     if (number % i === 0 && number > 2) {
+     check = false;
+ }
+ }
+     return check;
+ } // check đung sai của số nguyên tố
+ let a = check_prime (numbers);
+ console.log(a)
+     function list_prime (n) {
+     let N = 2;
+     let count = 0;
+     while (count < n) {
+     if (check_prime(N)) {
+     document.write(N);
+     document.write("<br>");
+     count++;
+ }
+     N++;
+ }
+ } // kiếm tra số nguyên tố
+
+ //     list_prime(numbers);
+ // function main(a) {
+ //     for (i=2;i<a;i++){
+ //         if (a%i!=0){
+ //             document.write('số bạn vừa nhập là số nguyên tố '+a);
+ //             break;
+ //         } else {
+ //             document.write('Số bạn vừa nhập không phải số nguyên tố '+a);
+ //             break;
+ //         }
+ //     }
+ //     return a;
+ // }
+ // function secondmain(b) {
+ //     b=document.getElementById('input').value;
+ //     main(b);
+ // }
+ //
+ // function beta(c) {
+ //     let d=1000;
+ //     document.write('2,3,5,7 ');
+ //     for (i=2;i<1000;i++){
+ //         if (i%2!=0&&i%3!=0&&i%5!=0&&i%7!=0){
+ //             document.write(+i+ "<br>");
+ //         }
+ //     }
+ //
+ // }
+</script>
+
+</html>

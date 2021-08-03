@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Xây dựng lớp Hình Tròn</title>
+</head>
+<body>
+
+</body>
+<script>
+   class Hinhtron {
+
+       constructor(radius) {
+
+           this.radius = radius;
+       }
+
+       getArea() {
+           return Math.PI*radius*radius;
+       }
+       getRadius () {
+           return this.radius;
+       }
+   }
+   let tron  = new Hinhtron(2);
+   let radius = tron.getRadius(); // 2
+   let area = tron.getArea(); // 12.56637061435917
+
+   // }
+   // let Circle = function(radius) {
+   //
+   //     this.radius = radius;
+   //
+   //     this.getRadius = function() {
+   //         return radius;
+   //     }
+   //     this.getArea = function() {
+   //         return Math.PI * radius * radius;
+   //
+   //     }
+   //
+   // };
+   // let circle = new Circle(2);
+   // let radius = circle.getRadius(); // 2
+   // let area = circle.getArea(); // 12.56637061435917
+
+   alert("radius: " + radius + "; area: " + area);
+
+</script>
+</html>

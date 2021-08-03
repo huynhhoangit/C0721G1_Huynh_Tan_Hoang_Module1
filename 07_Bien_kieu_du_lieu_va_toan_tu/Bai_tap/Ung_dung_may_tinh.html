@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Ứng dụng máy tính</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>
+            <label><input type="text" id="A1"></label>
+        </td>
+
+        <th>
+            <label id="pheptoan" style="color: blue; font-size: 30px"></label>
+        </th>
+
+        <td>
+            <label><input type="text" id="A2"></label>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <button type="button"  style="width: 120px" onclick="calculate('+')">Addition (+)</button>
+        </td>
+        <td>
+            <button type="button" style="width: 120px" onclick="calculate('-')">Subtraction (-)</button>
+        </td>
+        <td>
+            <button type="button" style="width: 120px" onclick="calculate('X')">Multiplication (X)</button>
+        </td>
+        <td>
+            <button type="button" style="width: 120px" onclick="calculate('/')">Division (/)</button>
+        </td>
+
+
+    </tr>
+    <tr>
+        <td colspan="4" style="color: #0733b8" >
+            <label style="font-size: 60px ; text-align: center" id="result"></label>
+        </td>
+    </tr>
+
+
+</table>
+
+</body>
+
+<script>
+    function calculate(value) {
+
+         console.log(value)
+
+        let A1 = parseInt(document.getElementById("A1").value);
+        let A2 = parseInt(document.getElementById("A2").value);
+        if (value === "+") {
+
+            document.getElementById("pheptoan").innerText = "+";
+            document.getElementById("result").innerText = "Result : " + A1 + A2;
+        } else if (value === "-") {
+            document.getElementById("pheptoan").innerText = "-";
+            document.getElementById("result").innerText = "Result : " + (A1 - A2);
+        } else if (value === "X") {
+            document.getElementById("pheptoan").innerText = "x";
+            document.getElementById("result").innerText = "Result : " + A1 * A2;
+        } else if (value === "/") {
+            document.getElementById("pheptoan").innerText = "/";
+            document.getElementById("result").innerText = "Result : " + A1 / A2;
+        }
+
+    }
+
+
+</script>
+</html>
+

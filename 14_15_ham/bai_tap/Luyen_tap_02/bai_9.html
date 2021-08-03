@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 9</title>
+</head>
+<body>
+
+</body>
+<script>
+
+
+
+    let x = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    let nameProduct = prompt("Nhập Vào Một Ký Tự Muốn Thêm Vào Chuỗi:")
+    x.push(nameProduct);
+    // let x = ["1","2","3","4","5","6"] ;
+
+    addNewProduct(x)
+
+    function addNewProduct(manga) {
+
+        let check = true;
+        let temp = prompt(" Nhập Ký Tự Cần Tìm  :");
+        while (check) {
+            for (let i = 0; i < manga.length; i++) {
+                if (manga[i] === temp) {
+                    check = false;
+                    document.write("Tiếng việt là :" + manga[i]);
+                    break;
+
+                }
+
+            }
+            if (check) {
+                document.write("-1");
+                break;
+
+            }
+
+        }
+
+
+
+    }
+
+
+</script>
+
+</html>

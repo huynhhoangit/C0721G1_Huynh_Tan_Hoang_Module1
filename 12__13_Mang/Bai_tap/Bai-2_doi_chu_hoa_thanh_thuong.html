@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let str  = prompt('xin moi nhap chuoi') ;
+    const cHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const cThuong = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for(let x=0; x<str.length; x++)
+    {
+        if(cHoa.includes(str[x]))
+        {
+            result.push(str[x].toLowerCase());     /// toLowerCase  là đổi chửa thàng thường
+        }
+        else if(cThuong.includes(str[x]))
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));
+
+</script>
+</html>
