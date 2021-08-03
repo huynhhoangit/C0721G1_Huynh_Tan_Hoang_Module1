@@ -5,24 +5,84 @@
     <title>Xây dựng lớp mô tả hình chữ nhật</title>
 </head>
 <body>
-<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+
 <script>
-    class rectangle {
-        constructor(l,h,) {
-            this.l=l;
-            this.h=h;
-        }
-        getArea(){
-            return this.l*this.h;
-        }
-        getPerimeter(){
-            return (this.l+this.h) *2
-        }
+ class HinhCN {
+          constructor(dai, rong) {
+         this.dai = dai ;
+         this.rong = rong ;
+
+     }
+     getDai(){
+         return this.dai;
+      }
+     getRong(){
+         return this.rong;
+     }
+     setDai(dai) {
+         this.dai = dai;
+     }
+     setRong(rong) {
+         this.rong = rong ;
+     }
+     tinhS(){
+         return this.dai*this.rong ;
     }
-    let rec = new rectangle(15,7);
-    let area=rec.getArea();
-    let perimeter=rec.getPerimeter();
-    alert("Diện tích của hình chữ nhật là: " +area + " Chu vi của hình chữ nhật là: " + perimeter);
+     tinhCV(){
+         return (this.dai+this.rong)*2 ;
+     }
+
+
+ }
+
+ HinhCN.prototype.display = function () {
+
+     let ctx = document.getElementById("myCanvas").getContext("2d");
+     ctx.rect(250, 250, this.dai, this.rong);
+     ctx.stroke();
+     ctx.fillStyle = getRandomColor();
+     ctx.fill();
+ };
+
+ function getRandomHex(){
+     return Math.floor(Math.random()*255);
+ }
+
+ function getRandomColor(){
+     const red = getRandomHex();
+     const green = getRandomHex();
+     const blue = getRandomHex();
+     return "rgb(" + red + "," + blue + "," + green +")";
+ }
+
+ let hinhA = new HinhCN(10,5);
+ let daiiA = hinhA.getDai() ;
+ let ronggA = hinhA.getRong() ;
+ let ChuviA = hinhA.tinhCV();
+ let dientichA = hinhA.tinhS();
+ alert("Hình chữ nhật A có chiều dài là: " + daiiA + " và chiều rộng là: " + ronggA + " thì có diện tích là: " + dientichA + " và chu vi là: " + ChuviA);
+
+
+ let hinhC= new HinhCN();
+ hinhC.setDai(60);
+ hinhC.setRong(20);
+ let daiiC = hinhC.getDai() ;
+ let ronggC = hinhC.getRong() ;
+ let ChuviC = hinhC.tinhCV();
+ let dientichC = hinhC.tinhS();
+ alert("Hình chữ nhật C có chiều dài là: " + daiiC + " và chiều rộng là: " + ronggC + " thì có diện tích là: " + dientichC + " và chu vi là: " + ChuviC);
+ function createRectangle () {
+     let hinhc = new HinhCN(500, 300);
+     hinhc.display();
+ }
+ createRectangle ();
+
+
+
+
+
 </script>
+
 </body>
 </html>
