@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Game đơn giản - di chuyển đối tượng</title>
+</head>
+
+<body>
+<div id="game"></div>
+</body>
+<script>
+    function Hero(image, top, left, size) {
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+
+
+        // this.speed = speed;
+
+        this.getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;"  alt=""/>';
+        }
+
+        this.moveRight = function () {
+            this.left += 300;
+            console.log('moveRight: ' + this.left);
+        }
+        this.moveLeft = function () {
+            this.left -= 6050;
+            console.log('moveLeft: ' + this.left);
+        }
+        this.movedown = function () {
+            this.top += 300;
+            console.log('movedown: ' + this.top);
+        }
+        this.moveUp = function () {
+            this.top -= 7250;
+            console.log('moveUp: ' + this.top);
+        }
+
+
+    }
+
+    const hero = new Hero('doremon.jpg', 30, 50, 500);
+
+    function start() {
+        if (hero.left < window.innerWidth - hero.size && hero.top < (window.innerHeight-100) - hero.size) {
+            hero.moveRight();
+
+
+
+        } else if (hero.left >= window.innerWidth - hero.size && hero.top < window.innerHeight - hero.size) {
+            hero.movedown();
+            console.log(innerWidth);
+            console.log(innerHeight);
+
+        } else if (hero.left >= (window.innerWidth-200) - hero.size && hero.top > window.innerHeight - hero.size) {
+            hero.moveLeft();
+            console.log(innerWidth);
+            console.log(innerHeight);
+        } else if (hero.left < (window.innerWidth-200) - hero.size && hero.top > (window.innerHeight-200) - hero.size) {
+            hero.moveUp();
+
+        }
+
+
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 10)
+
+
+    }
+
+    start();
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam và Eva</title>
+</head>
+<body>
+
+</body>
+<script>
+
+        class Apple {
+        constructor() {
+        this.weight = 10;
+    }
+        getWeight () {
+        return this.weight;
+    }
+        decreaseApple () {
+        return this.weight--;
+    }
+        isEmpty () {
+        if (this.weight == 0) {
+        return true;
+    } else {
+        return false;
+    }
+    }
+    }
+        class Human {
+        constructor(name, weight) {
+        this.name = name;
+        this.gender = "";
+        this.weight = weight;
+    }
+        isMale () {
+        if (this.gender == "male") {
+        return true;
+    } else {
+        return false;
+    }
+    }
+        setGender (sex) {
+        return this.gender = sex;
+    }
+        checkApple (Apple) {
+        if (Apple.weight > 0) {
+        return true;
+    } else {
+        return false;
+    }
+    }
+        eatApple (Apple) {
+        this.checkApple(Apple);
+        this.afterEatApple();
+        Apple.decreaseApple();
+        alert(this.name + " ăn táo, sau đó khối lượng của " + this.name + " sẽ là: " + this.weight + " và khối lượng của táo còn lại là: " + Apple.weight);
+    }
+        afterEatApple () {
+        return this.weight++;
+    }
+        say (message) {
+        alert(message);
+    }
+        getName () {
+        return this.name;
+    }
+        getWeight () {
+        return this.weight;
+    }
+        setWeight (weight) {
+        return this.weight = weight;
+    }
+    }
+
+        function theStory() {
+        let adam = new Human("Adam", 60);
+        let eva = new Human("Eva", 45);
+        let apple = new Apple();
+        adam.setGender("male");
+        eva.setGender("female");
+        while (apple.weight > 0) {
+        adam.eatApple(apple);
+        eva.eatApple(apple);
+    }
+        alert("Apple are already eaten");
+    }
+        theStory();
+
+
+
+
+
+</script>
+</html>

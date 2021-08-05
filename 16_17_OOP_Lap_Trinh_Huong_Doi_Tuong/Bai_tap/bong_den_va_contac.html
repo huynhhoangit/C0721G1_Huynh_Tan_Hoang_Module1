@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>công tắc và bóng đèn</title>
+</head>
+<body>
+<h3>Chức năng bật tắt bóng đèn</h3>
+<img src="https://www.w3schools.com/js/pic_bulboff.gif" id="lamp" alt="">
+<br>
+<button onclick="turnOn_turnOff_lamp()">Bật/Tắt bóng đèn</button>
+<h4 id="result">Bóng đèn đang tắt</h4>
+
+<script>
+    class SwitchButton {
+        constructor(status) {
+            this.status = status;
+        }
+        turnOn_turnOff(){
+
+            this.status = !this.status;  // phủ đinh của status trả về true hoặc false
+        }
+    }
+   class Light{
+        constructor(button) {
+            this.button = button;
+        }
+       switch(){
+            if(this.button.status === true){
+                document.getElementById("lamp").src = "https://www.w3schools.com/js/pic_bulbon.gif";
+                document.getElementById("result").innerHTML = "Bóng đèn đang bật";
+
+            }else{
+                document.getElementById("lamp").src = "https://www.w3schools.com/js/pic_bulboff.gif";
+                document.getElementById("result").innerHTML = "Bóng đèn đang tắt";
+            }
+
+       }
+
+
+   }
+    let switchButton = new SwitchButton(false);
+    let lamp = new Light(switchButton);
+
+    function turnOn_turnOff_lamp(){
+        switchButton.turnOn_turnOff();
+        lamp.switch();
+    }
+
+</script>
+</body>
+</html>
