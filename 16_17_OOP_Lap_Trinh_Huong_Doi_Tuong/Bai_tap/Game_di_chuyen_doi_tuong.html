@@ -45,7 +45,7 @@
 
     }
 
-    const hero = new Hero('doremon.jpg', 30, 50, 500);
+    const hero = new Hero('https://img.thuthuatphanmem.vn/uploads/2018/09/24/anh-che-doremon-sieu-nhan_054124968.jpg', 30, 50, 500);
 
     function start() {
         if (hero.left < window.innerWidth - hero.size && hero.top < (window.innerHeight-100) - hero.size) {
@@ -69,7 +69,7 @@
 
 
         document.getElementById('game').innerHTML = hero.getHeroElement();
-        setTimeout(start, 10)
+        setTimeout(start, 50)
 
 
     }

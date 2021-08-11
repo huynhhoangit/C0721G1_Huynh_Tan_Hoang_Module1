@@ -2,49 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>[Thực hành] Hiển thị đầu ra</title>
+    <title>[Bài tập] Game đơn giản - di chuyển đối tượng</title>
 </head>
 <body>
-<!--Bài tập 1: Hiển thị kết quả sử dụng hàm alert():-->
-
-<p>Bài tập 1: Hiển thị kết quả sử dụng hàm alert():</p>
-<button type="button" onclick="showMessage();">Click Me!</button>
-
-<!--Bài tập 2: Hiển thị kết quả sử dụng thẻ HTML:-->
-
-<p>Bài tập 2: Hiển thị kết quả sử dụng thẻ HTML:</p>
-<div id="messageDiv"></div>
-<button type="button" onclick="showMessage2();">Click Me!</button>
-
-<!--Bài tập 3: Hiển thị kết quả sử dụng hàm document.write():-->
-
-<p>Bài tập 3: Hiển thị kết quả sử dụng hàm document.write():</p>
-<h1> AD Đẹp Trai</h1>
-
-<button type="button" onclick="showMessage3();">Click Me!</button>
-
-<!--Bài tập 4: Hiển thị kết quả sử dụng hàm console.log():-->
-
-
-<p>Bài tập 4: Hiển thị kết quả sử dụng hàm console.log():</p>
-
-<button type="button" onclick="showMessage4();">Click Me!</button>
-
-</body>
+<div id="game"></div>
 <script>
-    function showMessage(){
-        alert('Xin chào! Hiển thị kết quả sử dụng hàm alert');
-    }
+    var x = 3;
+    var y = [1,2,3,4,5];
+    var z = [6,7,8,9,10,11];
 
-    function showMessage2(){
-        document.getElementById('messageDiv').innerHTML = 'Xin chào! Hiển thị kết quả sử dụng thẻ HTML:';
+    if(y[x] + z[1] == z[5])
+    {
+        console.log('Codegym');
     }
-
-    function showMessage3(){
-        document.write('Xin chào! Hiển thị kết quả sử dụng hàm document.write():');
-    }
-    function showMessage4() {
-        console.log('Xin chào! Hiển thị kết quả sử dụng hàm console.log():');
+    else
+    {
+        console.log('Agilead');
     }
 </script>
+</body>
 </html>
