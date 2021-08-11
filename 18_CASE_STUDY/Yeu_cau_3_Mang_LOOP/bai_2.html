@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<!--<script>-->
+<!--    let n = parseInt(prompt("Nhập Vào Số lượng Phần Tử  Trong mảng Thứ Nhất  Mà bạn Muốn :"));-->
+<!--    let arra = [];-->
+<!--    let arrb = [];-->
+<!--    for (let i = 0; i < n; i++) {-->
+
+<!--        arra[i] = parseInt(prompt("Nhập Vào Phần Tử Trong Mảng Là Số nguyên Thứ : " + i));-->
+<!--    }-->
+<!--    document.write("Mảng A bạn nhập là: [" + arra + " ]");-->
+<!--    document.write("<br>");-->
+<!--    let m = parseInt(prompt("Nhập Vào Số lượng Phần Tử  Trong mảng Thứ Nhất  Mà bạn Muốn :"));-->
+<!--    for (let j = 0; j < m; j++) {-->
+
+<!--        arrb[j] = parseInt(prompt("Nhập Vào Phần Tử Trong Mảng Là Số nguyên Thứ : " + i));-->
+<!--    }-->
+<!--    document.write("Mảng B bạn nhập là: [" + arrb + " ]");-->
+<!--    document.write("<br>");-->
+
+
+<!--</script>-->
+<script>
+    // Bài 2: Cho 2 mảng A và B chứa số nguyên. Tìm ra một mảng đã được sắp xếp chứa các
+    // phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
+    // Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện
+    // Ví dụ: A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3] thì kết quả missingValue(A, B) = [4, 6]
+    let a = [];
+    let b = [];
+    let a1 = prompt("Nhập vào số phần tử mảng a");
+    let b1 = prompt("Nhập vào số phần tử mảng b");
+    for (i = 0; i < a1; i++) {
+        a[i] = prompt("Nhập vào số thứ: " + i + " của mảng a");
+    }
+    for (j = 0; j < b1; j++) {
+        b[j] = prompt("Nhập vào số thứ: " + j + " của mảng b");
+    }
+    let missvalue = [];
+
+    for (let k = 0; k < b.length; k++) {
+        let check = a.includes(b[k]);
+        if (check === false)
+        {
+            missvalue.push(b[k]);}
+    }
+    document.write("Số phần tử mảng a: [" + a + "]")
+    document.write("</br>")
+    document.write("Số phần tử mảng b: [" + b + "]")
+    document.write("</br>")
+    document.write("Số phần tử mảng b mà mảng a không có là: [" + missvalue + "]")
+</script>
+</html>

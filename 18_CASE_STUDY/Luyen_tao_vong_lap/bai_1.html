@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây.</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    function hinhcnrong(x,y) {
+        for (let i = 1; i <= x; i++) {
+            for (let j = 1; j <= y; j++) {
+
+                if (i === 1 || i === x || j === 1 || j === y) {
+                    document.write("*");
+                } else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+
+    let x = parseInt(prompt("nhap chiều rộng :"));
+    let y = parseInt(prompt("nhap chiều dài :"));
+    hinhcnrong(x,y);
+
+
+</script>
+</html>

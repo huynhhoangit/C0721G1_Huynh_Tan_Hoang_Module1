@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình tính thuế</title>
+</head>
+<body>
+<p>
+    Bài 1: Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng (số tiền lương thực sự mà nhân viên đó nhận được). Với các thông số giả sử như sau (không theo luật lương, chỉ là con số giả sử để dễ tính toán):
+    20% thuế thu nhập nếu lương là 15 triệu.
+    10% thuế thu nhập nếu lương từ 7 đến 15 triệu.
+    5% thuế thu nhập nếu lương dưới 7 triệu
+
+
+</p>
+</body>
+<script>
+   function tinhluongsauthue(){
+       if(H<7000){
+           alert("Thu Nhập Cảu Bạn Sau Thuế Là: "+ H*95/100)
+           console.log(H+"kem");
+       } else if(7000<=H && H <=15000){
+           alert("Thu Nhập Cảu Bạn Sau Thuế Là: "+ H*90/100)
+           console.log(H+"kt");
+       } else if(H>15000){
+           alert("Thu Nhập Cảu Bạn Sau Thuế Là: "+ H*80/100)
+           console.log(H +"G");
+       }
+
+
+
+   }
+  let H = parseInt(prompt("Nhập Số Lương Của Bạn :")) ;
+   tinhluongsauthue(H);
+
+</script>
+
+</html>

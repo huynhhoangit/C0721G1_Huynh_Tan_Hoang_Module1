@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h. Ví dụ: h = 5</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    function hinhTamGiacVuongRong(x) {
+        for (let i = 1; i <= x; i++) {
+            for (let j = 1; j <= x; j++) {
+
+
+                if (j === 1 || i === j || i === x) { // tam giac vuông cân xét từ trên xuống ,
+                    // i = 1 và j = 1 đều in sao , hoặc  i = j vị trị bằng nhau ,
+                    // in bàng nhau i = x chiều cao bằng chiều dài để có tam giác vuông
+                    document.write("*");
+                } else {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+
+    let x = parseInt(prompt("nhap chiều rộng :"));
+    hinhTamGiacVuongRong(x);
+
+
+
+
+
+</script>
+</html>

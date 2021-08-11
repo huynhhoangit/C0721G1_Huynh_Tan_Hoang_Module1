@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Vẽ tam giác cân đặc có chiều cao h. Ví dụ: h = 5</title>
+</head>
+<body>
+
+</body>
+<script>
+    function hinhTamGiacVuongcan(x) {
+        for (let i = 1; i <= x; i++) {
+            for (let j = 1; j <= x-i; j++) {
+                document.write("&nbsp&nbsp");
+         }
+            for(let j=1;j<=2*i-1;j++){
+            document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+
+    let x = parseInt(prompt("nhap chiều rộng :"));
+    hinhTamGiacVuongcan(x);
+
+
+
+</script>
+</html>

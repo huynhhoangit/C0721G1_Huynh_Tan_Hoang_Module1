@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+
+<body>
+<p>Bài 1: Cho mảng a chỉ chứa các số nguyên
+    Xây dựng mảng b là prefix sums của mảng a cụ thể theo công thức:
+</p>
+
+<script>
+    let n = parseInt(prompt("Nhập Vào Số lượng Phần Tử Trong mảng Mà bạn Muốn :"));
+    let arra = [];
+    let arrb = [];
+        for (let i = 0 ; i < n ; i ++){
+
+        arra[i] = parseInt(prompt("Nhập Vào Phần Tử Trong Mảng Là Số nguyên Thứ : " + i));
+    }
+    document.write("Mảng A bạn nhập là: [" +arra+" ]");
+    document.write("<br>");
+    for (let i = 0 ; i  < arra.length ; i ++){
+        if(i === 0 ){
+            arrb[0] = arra[0] ;
+
+        }else {
+            arrb[i]= arrb[i-1] + arra[i];
+
+        }
+
+    }
+    document.write("Mảng Sau Khi prefix sums: " + arrb.join(","));
+
+
+
+</script>
+</body>
+</html>
